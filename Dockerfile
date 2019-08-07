@@ -28,6 +28,7 @@ RUN apt-get -qq update \
 			debconf \
 			apt-transport-https \
 			sudo \
+			software-properties-common \
 	&& locale-gen "en_US.UTF-8" \
 	&& echo "locales	locales/default_environment_locale	select	en_US.UTF-8" | debconf-set-selections \
 	&& dpkg-reconfigure locales \
